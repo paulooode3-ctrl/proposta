@@ -46,7 +46,7 @@ export default function App() {
   const total = budgetItems.reduce((acc, item) => acc + item.value, 0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowContent(true), 2500);
+    const timer = setTimeout(() => setShowContent(true), 800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -61,13 +61,13 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505]"
           >
             <motion.div 
               initial={{ letterSpacing: "1.5em", opacity: 0 }}
               animate={{ letterSpacing: "0.6em", opacity: 1 }}
-              transition={{ duration: 2, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-[10px] font-black uppercase tracking-[0.6em] mb-6 text-white"
             >
               Nexus Company
@@ -75,7 +75,7 @@ export default function App() {
             <motion.div 
               initial={{ width: 0 }}
               animate={{ width: "60px" }}
-              transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }}
+              transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
               className="h-[1px] bg-zinc-800"
             />
           </motion.div>
